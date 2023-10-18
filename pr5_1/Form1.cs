@@ -27,8 +27,9 @@ namespace pr5_1
 
         private void tmrSecundomer_Tick(object sender, EventArgs e)
         {
-          //Внутри этого метода происходит увеличение счетчика секунд и минут,
-          //а также обновление текстовых полей txtSeconds и txtMinutes на форме.
+            //Внутри этого метода происходит увеличение счетчика секунд и минут,
+            //а также обновление текстовых полей txtSeconds и txtMinutes на форме.
+            
             seconds++;
 
             if (seconds == 60)
