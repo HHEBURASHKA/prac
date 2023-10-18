@@ -19,7 +19,7 @@ namespace pr5_1
         public Form1()
         {//задается интервал для таймера tmrSecundomer
             InitializeComponent();
-            tmrSecundomer.Interval = 1000;
+            tmrSecundomer.Interval = 2000;
          //добавляет обработчик события Tick для таймера tmrSecundomer.
          //Когда происходит событие Tick, будет вызываться метод tmrSecundomer_Tick
             tmrSecundomer.Tick += new EventHandler(tmrSecundomer_Tick);
