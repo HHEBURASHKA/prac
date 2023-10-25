@@ -34,7 +34,9 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pct
@@ -70,17 +72,28 @@
             // 
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1270, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(103, 347);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1815, 335);
+            this.ClientSize = new System.Drawing.Size(1370, 335);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pct);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,6 +104,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Timer tmr;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -12,9 +12,12 @@ namespace pr5_1
 {
     public partial class Form1 : Form
     {
+      
         public Form1()
         {
+            MessageBox.Show("Давно тебя не было в уличных гонках!", "Привет");
             InitializeComponent();
+            
         }
 
         private void tmr_Tick(object sender, EventArgs e)
@@ -36,6 +39,7 @@ namespace pr5_1
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+           
             if (isAnimating)
             {
                 //возвращает изображение в начальное положение
