@@ -35,16 +35,19 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lol = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lol)).BeginInit();
             this.SuspendLayout();
             // 
             // pct
             // 
             this.pct.Image = ((System.Drawing.Image)(resources.GetObject("pct.Image")));
-            this.pct.Location = new System.Drawing.Point(12, 12);
+            this.pct.Location = new System.Drawing.Point(-8, 12);
             this.pct.Name = "pct";
-            this.pct.Size = new System.Drawing.Size(921, 332);
+            this.pct.Size = new System.Drawing.Size(921, 352);
             this.pct.TabIndex = 0;
             this.pct.TabStop = false;
             // 
@@ -77,15 +80,30 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1270, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 347);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 362);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // lol
+            // 
+            this.lol.Image = ((System.Drawing.Image)(resources.GetObject("lol.Image")));
+            this.lol.Location = new System.Drawing.Point(726, 2);
+            this.lol.Name = "lol";
+            this.lol.Size = new System.Drawing.Size(589, 362);
+            this.lol.TabIndex = 4;
+            this.lol.TabStop = false;
+            this.lol.Click += new System.EventHandler(this.lol_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 335);
+            this.ClientSize = new System.Drawing.Size(1370, 357);
+            this.Controls.Add(this.lol);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnStart);
@@ -94,6 +112,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lol)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,6 +124,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Timer tmr;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox lol;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

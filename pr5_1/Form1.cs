@@ -25,10 +25,10 @@ namespace pr5_1
             /*Увеличивает значение свойства Left изображения pct на 20 пикселей
               Проверяет, если текущая позиция изображения pct, плюс его ширина и 20 пикселей, превышает ширину текущей формы*/
             pct.Left = pct.Left + 20;
-            if (pct.Left + pct.Width + 20 > this.Width)
+            if (pct.Left + pct.Width >= this.Width)
             {
                 tmr.Stop();
-                pct.Left = 0;
+                
                 btnStart.Text = "Старт";
                 return;
             }
@@ -56,11 +56,29 @@ namespace pr5_1
                 //Устанавливает значение переменной(выполняется)
                 isAnimating = true;
             }
+            // Запустить таймер
+            timer1.Start();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void lol_Click(object sender, EventArgs e)
+        {
+            lol.Visible = false; // Скрываем фотографию
+            // Установить интервал таймера
+            timer1.Interval = 3000; // 2 секунды
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop(); // Остановка таймера 
+
+            lol.Visible = true; // Вывод изображения 
+        }
     }
+
 }
