@@ -33,7 +33,7 @@ namespace pr5_1
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
-                info.Text = openFileDialog1.FileName;
+                info.Text = openFileDialog1.FileName; // Выводится полное имя файла в TextBox
             }
         }
 
@@ -71,9 +71,10 @@ namespace pr5_1
 
         private void savefile_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) /*открывается окно "SaveFileDialo"
+             "DialogResult.OK"гарантирует, что пользователь действительно выбрал место и имя файла*/
             {
-                pictureBox1.Image.Save(saveFileDialog1.FileName);
+                pictureBox1.Image.Save(saveFileDialog1.FileName); // Сохраняем изображение
             }
         }
     }
