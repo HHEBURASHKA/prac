@@ -15,6 +15,7 @@ namespace pr5_1
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,6 +77,12 @@ namespace pr5_1
             {
                 pictureBox1.Image.Save(saveFileDialog1.FileName); // Сохраняем изображение
             }
+        }
+
+        private void openForm2Button_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(); // Создание экземпляра Form2
+            form2.Show(); // Открыть Form2
         }
     }
 }
