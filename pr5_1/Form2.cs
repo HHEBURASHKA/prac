@@ -27,20 +27,22 @@ namespace pr5_1
         private void btnSave_Click(object sender, EventArgs e)
         {
             {
+                // Создание диалогового окна для сохранения файла
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*"; // Установка фильтра
-
+                // Отображение диалогового окна и ожидание выбора файла пользователем
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string fileName = saveFileDialog.FileName; // Получить имя выбранного файла
 
                     if (!string.IsNullOrEmpty(fileName))
                     {
+                        // Использование StreamWriter для записи текста в файл
                         using (StreamWriter writer = new StreamWriter(fileName))
                         {
-                            foreach (string item in lst.Items)
+                            foreach (string item in lst.Items) // Перебор элементов в ListBox
                             {
-                                writer.WriteLine(item);
+                                writer.WriteLine(item); // Запись каждого элемента в файл
                             }
                         }
                     }
@@ -50,15 +52,16 @@ namespace pr5_1
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            string fileName = txtFileName.Text;
-                lstFromfile.Items.Clear();
+            string fileName = txtFileName.Text; // Получение имени файла из текстового поля
+            lstFromfile.Items.Clear(); // Очистка элементов в другом ListBox
+                // Использование FileStream и BinaryReader для чтения из файла
                 using (FileStream fs = new FileStream(fileName, FileMode.Open))
                 using (BinaryReader br = new BinaryReader(fs))
                 {
-                    while (br.PeekChar() != -1)
+                    while (br.PeekChar() != -1) // Пока в файле есть символ
                     {
-                        lstFromfile.Items.Add(br.ReadString());
-                    }
+                        lstFromfile.Items.Add(br.ReadString()); // Добавление каждой строки из файла в ListBox
+                }
                     br.Close();
                     fs.Close();
                 }
@@ -66,8 +69,8 @@ namespace pr5_1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            lst.Items.Add(txt.Text);
-            txt.Clear();
+            lst.Items.Add(txt.Text); // Добавление текста из TextBox в ListBox
+            txt.Clear(); // Очистка TextBox после добавления
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -75,4 +78,8 @@ namespace pr5_1
             this.Close();
         }
     }
-}
+}/*if- это условный оператор, который выполняет блокировку кода только в том случае,
+  если условие, указанное внутри if, истинно (равномерно true). В противном случае код внутри ifзапускается
+foreach- это цикл, который используется для перебора элементов в коллекциях, таких как массивы, упорядоченные,
+словари и другие, без явного указания индексов или итераторов.
+foreachудобно использовать для выполнения действий над каждым элементом коллекции.*/
