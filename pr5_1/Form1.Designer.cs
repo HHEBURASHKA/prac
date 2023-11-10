@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblArr = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblResult = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblArr = new System.Windows.Forms.Label();
             this.btnNewArr = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -62,25 +62,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры массива";
             // 
-            // groupBox2
+            // textBox3
             // 
-            this.groupBox2.Controls.Add(this.lblResult);
-            this.groupBox2.Location = new System.Drawing.Point(39, 320);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(737, 100);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Преобразованный массив ";
+            this.textBox3.Location = new System.Drawing.Point(184, 97);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 7;
             // 
-            // groupBox3
+            // textBox2
             // 
-            this.groupBox3.Controls.Add(this.lblArr);
-            this.groupBox3.Location = new System.Drawing.Point(39, 195);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(737, 100);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Исходный массив ";
+            this.textBox2.Location = new System.Drawing.Point(184, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(184, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Верхняя граница чисел";
             // 
             // label1
             // 
@@ -100,54 +111,41 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Нижняя граница чисел ";
             // 
-            // label3
+            // groupBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Верхняя граница чисел";
-            // 
-            // lblArr
-            // 
-            this.lblArr.AutoSize = true;
-            this.lblArr.Location = new System.Drawing.Point(21, 56);
-            this.lblArr.Name = "lblArr";
-            this.lblArr.Size = new System.Drawing.Size(35, 13);
-            this.lblArr.TabIndex = 5;
-            this.lblArr.Text = "label4";
+            this.groupBox2.Controls.Add(this.lblResult);
+            this.groupBox2.Location = new System.Drawing.Point(39, 320);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(737, 100);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Преобразованный массив ";
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
             this.lblResult.Location = new System.Drawing.Point(21, 53);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(35, 13);
+            this.lblResult.Size = new System.Drawing.Size(0, 13);
             this.lblResult.TabIndex = 6;
-            this.lblResult.Text = "label5";
             // 
-            // textBox1
+            // groupBox3
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(184, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.groupBox3.Controls.Add(this.lblArr);
+            this.groupBox3.Location = new System.Drawing.Point(39, 195);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(737, 100);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Исходный массив ";
             // 
-            // textBox2
+            // lblArr
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(184, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.lblArr.AutoSize = true;
+            this.lblArr.Location = new System.Drawing.Point(21, 56);
+            this.lblArr.Name = "lblArr";
+            this.lblArr.Size = new System.Drawing.Size(0, 13);
+            this.lblArr.TabIndex = 5;
             // 
             // btnNewArr
             // 
