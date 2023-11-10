@@ -42,6 +42,7 @@
             this.btnNewArr = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.form2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -181,11 +182,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // form2
+            // 
+            this.form2.Location = new System.Drawing.Point(713, 426);
+            this.form2.Name = "form2";
+            this.form2.Size = new System.Drawing.Size(75, 23);
+            this.form2.TabIndex = 8;
+            this.form2.Text = "2";
+            this.form2.UseVisualStyleBackColor = true;
+            this.form2.Click += new System.EventHandler(this.form2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.form2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnNewArr);
@@ -221,6 +233,7 @@
         private System.Windows.Forms.Button btnNewArr;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button form2;
     }
 }
 
