@@ -32,35 +32,36 @@ namespace pr5_1
             btnSort.Enabled = true; //Разблокировка кнопки сортировки.
             textBox1.Text = n.ToString(); // Отображение количества используемых чисел (думая наперед пишу, что n это переменная заданная выше)
         }
-        private int MinNumber(int[] x, int m)
+        private int MinNumber(int[] x, int m) //Эту часть кода видимо писал под снюсом, сами видели :)
         {
             int min = x[m];
-            int MinN = m;
-            for (int i = m; i < x.Length; i++) //Короче эта часть кода приводит к состоянию готовности минимальный элемент в оставшейся части массива
+            int MinN = m; //Короче эта часть кода приводит к состоянию готовности минимальный элемент в оставшейся части массива
+            for (int i = m; i < x.Length; i++) //Цикл определения минимального элемента в оставшейся части массива
             {
-                if (x[i] < min)
+                if (x[i] < min) //Обновление минимального элемента и его индекса
                 {
                     min = x[i];
                     MinN = i;
                 }
             }
-            return MinN;
+            return MinN; //Возвращаем индекс мин элемента
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            int k, t;
-            for(int i=0; i<Arr.Length; i++)
+            int k, t; //Короче эта часть кода приводит к состоянию готовности 
+            for (int i=0; i<Arr.Length; i++) /* Короче i приравнивается к 0, и постепенно увеличивается на 1,
+                                              и цикл будет продолжаться пока i не дойдет до значения длины массива, в данном случае это 10*/
             {
                 k=MinNumber(Arr,i);
-                t = Arr[i];
-                Arr[i] = Arr[k];
-                Arr[k] = t;
-                lblResult.Text += Arr[i];
-                if (i != Arr.Length -1) { lblResult.Text += ","; }
+                t = Arr[i]; //Временная переменная принимает значение
+                Arr[i] = Arr[k]; // i заменяется на мин значение из предыдущего шага 
+                Arr[k] = t; // Значение из предыдущего шага заменятеся на значение из временной переменной 
+                lblResult.Text += Arr[i]; //Добавление текущего элемента в текстовое поле 
+                if (i != Arr.Length -1) { lblResult.Text += ","; } //Добавление запятой, если данный элемент не последний
             }
-            btnSort.Enabled=false;
-           
+            btnSort.Enabled=false; //Блокировка кнопки сортировки
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
