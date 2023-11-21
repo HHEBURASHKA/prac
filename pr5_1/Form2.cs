@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pr5_1
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
@@ -20,9 +20,12 @@ namespace pr5_1
         private void buttonCalc_Click(object sender, EventArgs e)
         {
             //сичтаем с формы требуемые значени
-            double Xmin = double.Parse(textBoxXmin.Text);
-            double Xmax = double.Parse(textBoxXmax.Text);
-            double Step = double.Parse(textBoxStep.Text);
+            double Xmin = -1.5;
+            double Xmax = 3.5;
+            double Step = 0.5;
+            double a = -1.25;
+            double b = -1.5;
+            double c = 0.75;
             //количество точек графика
             int count = (int)Math.Ceiling((Xmax - Xmin) / Step)
                 + 1;
@@ -36,8 +39,8 @@ namespace pr5_1
                 //вычисляем значение
                 X[i] = Xmin + Step * i;
                 //вычисляем значение функций в точке X
-                y1[i] = Math.Sin(X[i]);
-                y2[i] = Math.Cos(X[i]);
+                y1[i] = Math.Pow(10, -2) * b * c / (X[i] + Math.Cos(Math.Sqrt(Math.Pow(a, 3) * X[i])));
+                y2[i] = (Math.Pow(X[i], 2) + 2 * X[i] - 7) / Math.Sqrt(X[i]);
             }
             //настраиваем оси графика
             chart1.ChartAreas[0].AxisX.Minimum = Xmin;
@@ -47,12 +50,6 @@ namespace pr5_1
             //добавляем вычисление значения в графики
             chart1.Series[0].Points.DataBindXY(X, y1);
             chart1.Series[1].Points.DataBindXY(X, y2);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 form2 = new Form2();
-            form2.Show();
         }
     }
 }
