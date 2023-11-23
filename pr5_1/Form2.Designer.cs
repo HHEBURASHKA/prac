@@ -33,14 +33,14 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonCalc = new System.Windows.Forms.Button();
-            this.textBoxXmin = new System.Windows.Forms.TextBox();
-            this.textBoxXmax = new System.Windows.Forms.TextBox();
-            this.textBoxStep = new System.Windows.Forms.TextBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.textBoxXminS = new System.Windows.Forms.TextBox();
+            this.textBoxXmaxS = new System.Windows.Forms.TextBox();
+            this.textBoxStepS = new System.Windows.Forms.TextBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCalc
@@ -53,50 +53,51 @@
             this.buttonCalc.UseVisualStyleBackColor = true;
             this.buttonCalc.Click += new System.EventHandler(this.buttonCalc_Click);
             // 
-            // textBoxXmin
+            // textBoxXminS
             // 
-            this.textBoxXmin.Location = new System.Drawing.Point(227, 421);
-            this.textBoxXmin.Name = "textBoxXmin";
-            this.textBoxXmin.Size = new System.Drawing.Size(100, 20);
-            this.textBoxXmin.TabIndex = 19;
+            this.textBoxXminS.Location = new System.Drawing.Point(227, 421);
+            this.textBoxXminS.Name = "textBoxXminS";
+            this.textBoxXminS.Size = new System.Drawing.Size(100, 20);
+            this.textBoxXminS.TabIndex = 19;
             // 
-            // textBoxXmax
+            // textBoxXmaxS
             // 
-            this.textBoxXmax.Location = new System.Drawing.Point(372, 422);
-            this.textBoxXmax.Name = "textBoxXmax";
-            this.textBoxXmax.Size = new System.Drawing.Size(100, 20);
-            this.textBoxXmax.TabIndex = 20;
+            this.textBoxXmaxS.Location = new System.Drawing.Point(372, 422);
+            this.textBoxXmaxS.Name = "textBoxXmaxS";
+            this.textBoxXmaxS.Size = new System.Drawing.Size(100, 20);
+            this.textBoxXmaxS.TabIndex = 20;
             // 
-            // textBoxStep
+            // textBoxStepS
             // 
-            this.textBoxStep.Location = new System.Drawing.Point(513, 422);
-            this.textBoxStep.Name = "textBoxStep";
-            this.textBoxStep.Size = new System.Drawing.Size(100, 20);
-            this.textBoxStep.TabIndex = 21;
+            this.textBoxStepS.Location = new System.Drawing.Point(513, 422);
+            this.textBoxStepS.Name = "textBoxStepS";
+            this.textBoxStepS.Size = new System.Drawing.Size(100, 20);
+            this.textBoxStepS.TabIndex = 21;
             // 
-            // chart1
+            // chart2
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 5);
-            this.chart1.Name = "chart1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(3, 5);
+            this.chart2.Name = "chart2";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
             series2.BorderWidth = 3;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series2.Legend = "Legend1";
             series2.Name = "Series2";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(795, 398);
-            this.chart1.TabIndex = 26;
-            this.chart1.Text = "chart1";
+            this.chart2.Series.Add(series1);
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(795, 398);
+            this.chart2.TabIndex = 26;
+            this.chart2.Text = "chart1";
             // 
             // label1
             // 
@@ -130,17 +131,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxStep);
-            this.Controls.Add(this.textBoxXmax);
-            this.Controls.Add(this.textBoxXmin);
+            this.Controls.Add(this.textBoxStepS);
+            this.Controls.Add(this.textBoxXmaxS);
+            this.Controls.Add(this.textBoxXminS);
             this.Controls.Add(this.buttonCalc);
             this.Name = "Form2";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,10 +150,10 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCalc;
-        private System.Windows.Forms.TextBox textBoxXmin;
-        private System.Windows.Forms.TextBox textBoxXmax;
-        private System.Windows.Forms.TextBox textBoxStep;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.TextBox textBoxXminS;
+        private System.Windows.Forms.TextBox textBoxXmaxS;
+        private System.Windows.Forms.TextBox textBoxStepS;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
