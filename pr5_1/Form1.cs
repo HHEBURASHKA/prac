@@ -70,18 +70,18 @@ namespace pr5_1
             g.FillRectangle(pinkBrush, 700, 201, 20, 50);
             g.DrawRectangle(blackPen, 700, 201, 20, 50);
             // Талия (аномалия как песочные часы)
-            g.FillRectangle(pinkBrush,640, 156, 80, 46);
+            g.FillRectangle(pinkBrush, 640, 156, 80, 46);
             g.DrawRectangle(blackPen, 640, 156, 80, 46);
 
             // Свинья вид сверху 
             //Тельное сало
-            g.FillRectangle(pinkBrush,  100, 300, 200,100); 
+            g.FillRectangle(pinkBrush, 100, 300, 200, 100);
             g.DrawRectangle(blackPen, 100, 300, 200, 100);
             // Головное сало
             g.FillRectangle(pinkBrush, 300, 314, 80, 75);
             g.DrawRectangle(blackPen, 300, 314, 80, 75);
             // То чем смотрят 
-            g.FillRectangle(blackBrush, 381, 315, 4, 10);  
+            g.FillRectangle(blackBrush, 381, 315, 4, 10);
             g.FillRectangle(blackBrush, 381, 367, 4, 10);
             g.FillRectangle(whiteBrush, 381, 325, 4, 10);
             g.FillRectangle(whiteBrush, 381, 378, 4, 10);
